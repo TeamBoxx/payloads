@@ -1,6 +1,6 @@
 <?php
 
-namespace Thestoragescanner\Payloads\Attributes;
+namespace Thestoragescanner\Payloads\Mapper\Attributes;
 
 use Attribute;
 

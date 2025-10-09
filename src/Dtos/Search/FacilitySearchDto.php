@@ -3,7 +3,7 @@
 namespace Thestoragescanner\Payloads\Dtos\Search;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
-use Thestoragescanner\Payloads\Attributes\MapScalar;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class FacilitySearchDto extends DtoAbstract
 {

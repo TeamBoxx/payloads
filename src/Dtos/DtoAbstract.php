@@ -4,7 +4,7 @@ namespace Thestoragescanner\Payloads\Dtos;
 
 use JsonSerializable;
 use Thestoragescanner\Payloads\Helpers\Strings;
-use Thestoragescanner\Payloads\Traits\JsonSerializesMapKeys;
+use Thestoragescanner\Payloads\Mapper\Traits\JsonSerializesMapKeys;
 
 abstract class DtoAbstract implements JsonSerializable
 {

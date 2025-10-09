@@ -1,6 +1,6 @@
 <?php
 
-namespace Thestoragescanner\Payloads\Exceptions;
+namespace Thestoragescanner\Payloads\Mapper\Exceptions;
 
 use Exception;
 

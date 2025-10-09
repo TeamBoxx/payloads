@@ -1,15 +1,15 @@
 <?php
 
-namespace Thestoragescanner\Payloads;
+namespace Thestoragescanner\Payloads\Mapper;
 
 use ReflectionClass;
 use ReflectionNamedType;
 use ReflectionProperty;
 use stdClass;
-use Thestoragescanner\Payloads\Attributes\MapArray;
-use Thestoragescanner\Payloads\Attributes\MapObject;
-use Thestoragescanner\Payloads\Attributes\MapScalar;
-use Thestoragescanner\Payloads\Exceptions\MapperException;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapObject;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
+use Thestoragescanner\Payloads\Mapper\Exceptions\MapperException;
 
 class Mapper
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Thestoragescanner\Payloads\Traits;
+namespace Thestoragescanner\Payloads\Mapper\Traits;
 
 use ReflectionProperty;
-use Thestoragescanner\Payloads\Attributes\MapAbstract;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapAbstract;
 
 trait JsonSerializesMapKeys
 {
