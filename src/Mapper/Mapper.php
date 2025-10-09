@@ -60,11 +60,14 @@ class Mapper
                 $attribute = $scalarAttributes[0]->newInstance();
 
                 $key = $attribute->key;
+
+                if (!static::isPropertyReadable($object, $key)) {
+                    continue;
+                }
+
                 $value = $object->{$key};
 
-                if (property_exists($object, $key)) {
-                    $property->setValue($instance, $value);
-                }
+                $property->setValue($instance, $value);
 
                 continue;
             }
@@ -76,16 +79,19 @@ class Mapper
 
                 $key = $attribute->key;
                 $type = $attribute->type;
+
+                if (!static::isPropertyReadable($object, $key)) {
+                    continue;
+                }
+
                 $value = $object->{$key};
 
-                if (property_exists($object, $key)) {
-                    $property->setValue(
-                        $instance,
-                        !is_null($value)
-                        ? static::mapArray((array) $value, $type)
-                        : null
-                    );
-                }
+                $property->setValue(
+                    $instance,
+                    !is_null($value)
+                    ? static::mapArray((array) $value, $type)
+                    : null
+                );
 
                 continue;
             }
@@ -97,16 +103,19 @@ class Mapper
 
                 $key = $attribute->key;
                 $type = static::getPropertyType($property);
+
+                if (!static::isPropertyReadable($object, $key)) {
+                    continue;
+                }
+
                 $value = $object->{$key};
 
-                if (property_exists($object, $key)) {
-                    $property->setValue(
-                        $instance,
-                        !is_null($value)
-                        ? static::mapToClass((object) $value, $type)
-                        : null
-                    );
-                }
+                $property->setValue(
+                    $instance,
+                    !is_null($value)
+                    ? static::mapToClass((object) $value, $type)
+                    : null
+                );
 
                 continue;
             }
@@ -159,6 +168,15 @@ class Mapper
             },
             $array
         );
+    }
+
+    protected static function isPropertyReadable(object $object, string $property): bool
+    {
+        if (!property_exists($object, $property)) {
+            return false;
+        }
+
+        return (new ReflectionProperty($object, $property))->isInitialized();
     }
 
     protected static function getPropertyType(ReflectionProperty $reflectionProperty): ?string
