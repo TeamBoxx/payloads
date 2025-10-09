@@ -3,6 +3,7 @@
 namespace Thestoragescanner\Payloads\Dtos\Search;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapObject;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class FacilitySearchDto extends DtoAbstract
@@ -40,38 +41,11 @@ class FacilitySearchDto extends DtoAbstract
     #[MapScalar('pickup_and_delivery')]
     public bool $pickupAndDelivery;
 
-    #[MapScalar('sponsored')]
-    public bool $sponsored;
+    #[MapObject('provider')]
+    public FacilitySearchProviderDto $provider;
 
-    #[MapScalar('min_price')]
-    public ?float $minPrice = null;
-
-    #[MapScalar('provider_id')]
-    public int $providerId;
-
-    #[MapScalar('provider_name')]
-    public string $providerName;
-
-    #[MapScalar('provider_image')]
-    public ?string $providerImage;
-
-    #[MapScalar('provider_verified')]
-    public bool $providerVerified;
-
-    #[MapScalar('provider_ssa_member')]
-    public bool $providerSsaMember;
-
-    #[MapScalar('price')]
-    public ?float $price;
-
-    #[MapScalar('size_squared')]
-    public ?float $sizeSquared;
-
-    #[MapScalar('size_cubic')]
-    public ?float $sizeCubic;
-
-    #[MapScalar('deviation')]
-    public float $deviation;
+    #[MapObject('unit')]
+    public FacilitySearchUnitDto $unit;
 
     #[MapScalar('distance')]
     public float $distance;
