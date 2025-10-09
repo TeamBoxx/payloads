@@ -176,7 +176,7 @@ class Mapper
             return false;
         }
 
-        return (new ReflectionProperty($object, $property))->isInitialized();
+        return (new ReflectionProperty($object, $property))->isInitialized($object);
     }
 
     protected static function getPropertyType(ReflectionProperty $reflectionProperty): ?string
