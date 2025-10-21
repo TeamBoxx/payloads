@@ -2,7 +2,7 @@
 
 namespace Thestoragescanner\Payloads\Enums;
 
-enum EntityEnum: string
+enum WebhookEntityEnum: string
 {
     case PROVIDER = 'provider';
     case FACILITY = 'facility';
