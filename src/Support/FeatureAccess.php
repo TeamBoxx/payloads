@@ -7,7 +7,7 @@ use Thestoragescanner\Payloads\Enums\FeatureEnum;
 
 class FeatureAccess
 {
-    private const array ACCESS_MATRIX = [
+    protected const array ACCESS_MATRIX = [
         FeatureEnum::PROVIDER_EDIT->value => [
             SubscriptionEnum::FREE,
             SubscriptionEnum::PAY_PER_CONVERSION,
@@ -109,7 +109,7 @@ class FeatureAccess
         ]
     ];
 
-    private const array EXCLUDED_ROLES_MVP_ADMIN = [
+    protected const array EXCLUDED_ROLES_MVP_ADMIN = [
         SubscriptionEnum::PARTNERSHIP,
         SubscriptionEnum::SPONSORED,
         SubscriptionEnum::PAY_PER_CONVERSION,
