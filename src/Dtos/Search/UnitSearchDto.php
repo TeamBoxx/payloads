@@ -61,9 +61,6 @@ class UnitSearchDto extends DtoAbstract
     #[MapScalar('price')]
     public ?float $price;
 
-    #[MapScalar('currency')]
-    public ?string $currency;
-
     #[MapScalar('available')]
     public ?bool $available;
 
