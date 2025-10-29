@@ -25,13 +25,24 @@ enum SubscriptionEnum: string
             self::FREE => 'Free',
             self::PARTNERSHIP => 'Partnership',
             self::SPONSORED => 'Sponsored',
-            self::PAY_PER_CONVERSION => 'Pay per Conversion',
-            self::PAY_PER_LEAD => 'Pay per Lead',
-            self::PAY_PER_LEAD_AND_CLICK => 'Pay per Lead & Pay per Click',
-            self::BASIC => 'Basic',
-            self::RECOMMENDED => 'Recommended',
-            self::PREMIUM => 'Premium',
+            self::PAY_PER_CONVERSION => 'Pay per Conversion (PPC)',
+            self::PAY_PER_LEAD => 'Pay per Lead (PPL)',
+            self::PAY_PER_LEAD_AND_CLICK => 'Pay per Lead & Pay per Click (PPLC)',
+            self::BASIC => 'Basic subscription (+PPLC)',
+            self::RECOMMENDED => 'Recommended subscription (+PPLC)',
+            self::PREMIUM => 'Premium subscription (+PPLC)',
         };
+    }
+
+    public static function checkoutActiveCases(): array
+    {
+        return [
+            self::PAY_PER_LEAD,
+            self::PAY_PER_LEAD_AND_CLICK,
+            self::BASIC,
+            self::RECOMMENDED,
+            self::PREMIUM,
+        ];
     }
 
     public static function options(): array
