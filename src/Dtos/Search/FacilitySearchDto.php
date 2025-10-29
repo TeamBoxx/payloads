@@ -32,9 +32,6 @@ class FacilitySearchDto extends DtoAbstract
     #[MapScalar('long')]
     public float $long;
 
-    #[MapScalar('on_request')]
-    public bool $onRequest;
-
     #[MapScalar('verified')]
     public bool $verified;
 

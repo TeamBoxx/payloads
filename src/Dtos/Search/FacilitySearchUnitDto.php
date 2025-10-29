@@ -36,4 +36,7 @@ class FacilitySearchUnitDto extends DtoAbstract
 
     #[MapScalar('estimated_price_range_high')]
     public ?float $estimatedPriceRangeHigh;
+
+    #[MapScalar('on_request')]
+    public bool $onRequest;
 }
