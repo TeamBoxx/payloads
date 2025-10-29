@@ -70,6 +70,9 @@ class UnitSearchDto extends DtoAbstract
     #[MapScalar('country')]
     public ?string $country;
 
+    #[MapScalar('country_code')]
+    public string $countryCode;
+
     #[MapScalar('city')]
     public ?string $city;
 
