@@ -78,4 +78,15 @@ enum FacilityLeadFormSizeEnum: string
             self::SIZE_25_PLUS  => '269+ ft²',
         };
     }
+
+    public static function options(): array
+    {
+        $cases = [];
+
+        foreach (self::cases() as $case) {
+            $cases[$case->value] = $case->label();
+        }
+
+        return $cases;
+    }
 }

@@ -22,4 +22,15 @@ enum FacilityLeadFormReasonEnum: string
             self::OTHER => 'Other',
         };
     }
+
+    public static function options(): array
+    {
+        $cases = [];
+
+        foreach (self::cases() as $case) {
+            $cases[$case->value] = $case->label();
+        }
+
+        return $cases;
+    }
 }

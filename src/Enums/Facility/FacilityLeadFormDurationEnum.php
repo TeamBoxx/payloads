@@ -22,4 +22,15 @@ enum FacilityLeadFormDurationEnum: string
             self::UNKNOWN => 'Don’t know how long',
         };
     }
+
+    public static function options(): array
+    {
+        $cases = [];
+
+        foreach (self::cases() as $case) {
+            $cases[$case->value] = $case->label();
+        }
+
+        return $cases;
+    }
 }
