@@ -4,12 +4,12 @@ namespace Thestoragescanner\Payloads\Enums\Facility;
 
 enum FacilityLeadFormReasonEnum: string
 {
-    case MOVE = 'move';
-    case RENOVATION = 'renovation';
-    case DIVORCE = 'divorce';
-    case EXTRA_SPACE = 'extra_space';
-    case STUDIES = 'studies';
-    case OTHER = 'other';
+    case MOVE = 'MOVE';
+    case RENOVATION = 'RENOVATION';
+    case DIVORCE = 'DIVORCE';
+    case EXTRA_SPACE = 'EXTRA_SPACE';
+    case STUDIES = 'STUDIES';
+    case OTHER = 'OTHER';
 
     public function label(): string
     {
@@ -21,16 +21,5 @@ enum FacilityLeadFormReasonEnum: string
             self::STUDIES => 'Studies (abroad)',
             self::OTHER => 'Other',
         };
-    }
-
-    public static function options(): array
-    {
-        $cases = [];
-
-        foreach (self::cases() as $case) {
-            $cases[$case->value] = $case->label();
-        }
-
-        return $cases;
     }
 }

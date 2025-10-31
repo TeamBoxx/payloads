@@ -4,12 +4,12 @@ namespace Thestoragescanner\Payloads\Enums\Facility;
 
 enum FacilityLeadFormDurationEnum: string
 {
-    case LESS_THAN_ONE_MONTH = 'less_than_one_month';
-    case ONE_TO_TWO_MONTHS = 'one_to_two_months';
-    case TWO_TO_FOUR_MONTHS = 'two_to_four_months';
-    case FOUR_TO_SIX_MONTHS = 'four_to_six_months';
-    case SIX_PLUS_MONTHS = 'six_plus_months';
-    case UNKNOWN = 'unknown';
+    case LESS_THAN_ONE_MONTH = 'LESS_THAN_ONE_MONTH';
+    case ONE_TO_TWO_MONTHS = 'ONE_TO_TWO_MONTHS';
+    case TWO_TO_FOUR_MONTHS = 'TWO_TO_FOUR_MONTHS';
+    case FOUR_TO_SIX_MONTHS = 'FOUR_TO_SIX_MONTHS';
+    case SIX_PLUS_MONTHS = 'SIX_PLUS_MONTHS';
+    case UNKNOWN = 'UNKNOWN';
 
     public function label(): string
     {
@@ -21,16 +21,5 @@ enum FacilityLeadFormDurationEnum: string
             self::SIX_PLUS_MONTHS => '6+ months',
             self::UNKNOWN => 'Don’t know how long',
         };
-    }
-
-    public static function options(): array
-    {
-        $cases = [];
-
-        foreach (self::cases() as $case) {
-            $cases[$case->value] = $case->label();
-        }
-
-        return $cases;
     }
 }
