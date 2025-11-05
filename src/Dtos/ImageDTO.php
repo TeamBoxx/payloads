@@ -2,10 +2,10 @@
 
 namespace Thestoragescanner\Payloads\Dtos;
 
-use Thestoragescanner\Payloads\Mapper\Attributes\MapObject;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class ImageDTO
 {
-    #[MapObject('url')]
+    #[MapScalar('url')]
     public string $url;
 }
