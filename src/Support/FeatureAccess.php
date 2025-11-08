@@ -76,7 +76,6 @@ class FeatureAccess
         ],
 
         FeatureEnum::UNIT_CLICKABLE_LINK->value => [
-            SubscriptionEnum::PAY_PER_LEAD,
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
