@@ -33,16 +33,23 @@ class FeatureAccess
         ],
 
         FeatureEnum::FACILITY_OPENING_HOURS->value => [
+            SubscriptionEnum::PAY_PER_LEAD,
+            SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
+            SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::FACILITY_SPECS->value => [
+            SubscriptionEnum::PAY_PER_LEAD,
+            SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
+            SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::FACILITY_PHOTOS->value => [
+            SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::PREMIUM,
         ],
