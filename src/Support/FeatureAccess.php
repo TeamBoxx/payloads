@@ -59,7 +59,6 @@ class FeatureAccess
         ],
 
         FeatureEnum::FACILITY_LEAD_FORM->value => [
-            SubscriptionEnum::FREE,
             SubscriptionEnum::SPONSORED,
             SubscriptionEnum::PAY_PER_CONVERSION,
             SubscriptionEnum::PAY_PER_LEAD,
