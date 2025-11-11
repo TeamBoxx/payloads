@@ -25,12 +25,12 @@ enum SubscriptionEnum: string
             self::FREE => 'Free',
             self::PARTNERSHIP => 'Partnership',
             self::SPONSORED => 'Sponsored',
-            self::PAY_PER_CONVERSION => 'Pay per Conversion (PPC)',
-            self::PAY_PER_LEAD => 'Pay per Lead (PPL)',
-            self::PAY_PER_LEAD_AND_CLICK => 'Pay per Lead & Pay per Click (PPLC)',
-            self::BASIC => 'Basic subscription (+PPLC)',
-            self::RECOMMENDED => 'Recommended subscription (+PPLC)',
-            self::PREMIUM => 'Premium subscription (+PPLC)',
+            self::PAY_PER_CONVERSION => 'Pay-Per-Conversion (PPC)',
+            self::PAY_PER_LEAD => 'Pay-Per-Lead (PPL)',
+            self::PAY_PER_LEAD_AND_CLICK => 'Pay-Per-Lead+Click (PPLC)',
+            self::BASIC => 'Basic (+ PPLC)',
+            self::RECOMMENDED => 'Recommended (+ PPLC)',
+            self::PREMIUM => 'Premium (+ PPLC)',
         };
     }
 
