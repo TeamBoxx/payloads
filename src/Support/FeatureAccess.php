@@ -15,11 +15,14 @@ class FeatureAccess
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::PROVIDER_WEBSITE_LINK->value => [
-            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
+            SubscriptionEnum::BASIC,
+            SubscriptionEnum::RECOMMENDED
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::FACILITY_EDIT->value => [
@@ -29,7 +32,7 @@ class FeatureAccess
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::FACILITY_OPENING_HOURS->value => [
@@ -37,7 +40,7 @@ class FeatureAccess
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::FACILITY_SPECS->value => [
@@ -45,17 +48,20 @@ class FeatureAccess
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::FACILITY_PHOTOS->value => [
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::FACILITY_PHONE_NUMBER->value => [
-            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
+            SubscriptionEnum::BASIC,
+            SubscriptionEnum::RECOMMENDED
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::FACILITY_LEAD_FORM->value => [
@@ -65,11 +71,11 @@ class FeatureAccess
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::FACILITY_DESCRIPTION->value => [
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::UNIT_EDIT->value => [
@@ -78,30 +84,30 @@ class FeatureAccess
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::UNIT_CLICKABLE_LINK->value => [
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::UNIT_PROMOTIONS->value => [
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::UPLIFT_SEARCH->value => [
             SubscriptionEnum::PAY_PER_CONVERSION,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::GOOGLE_REVIEWS->value => [
-            SubscriptionEnum::PREMIUM,
+            // SubscriptionEnum::PREMIUM,
         ],
 
         FeatureEnum::PARTNERS_PROMOTIONS->value => [

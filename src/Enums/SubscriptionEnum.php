@@ -12,7 +12,7 @@ enum SubscriptionEnum: string
     case PAY_PER_LEAD_AND_CLICK = 'pay_per_lead_and_click';
     case BASIC = 'basic';
     case RECOMMENDED = 'recommended';
-    case PREMIUM = 'premium';
+    // case PREMIUM = 'premium';
 
     public static function all(): array
     {
@@ -30,7 +30,7 @@ enum SubscriptionEnum: string
             self::PAY_PER_LEAD_AND_CLICK => 'Pay-Per-Lead+Click (PPLC)',
             self::BASIC => 'Basic (+ PPLC)',
             self::RECOMMENDED => 'Recommended (+ PPLC)',
-            self::PREMIUM => 'Premium (+ PPLC)',
+        // self::PREMIUM => 'Premium (+ PPLC)',
         };
     }
 
@@ -41,7 +41,7 @@ enum SubscriptionEnum: string
             self::PAY_PER_LEAD_AND_CLICK,
             self::BASIC,
             self::RECOMMENDED,
-            self::PREMIUM,
+            // self::PREMIUM,
         ];
     }
 
