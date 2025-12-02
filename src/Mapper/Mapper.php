@@ -2,6 +2,7 @@
 
 namespace Thestoragescanner\Payloads\Mapper;
 
+use BackedEnum;
 use ReflectionClass;
 use ReflectionNamedType;
 use ReflectionProperty;
@@ -60,14 +61,20 @@ class Mapper
                 $attribute = $scalarAttributes[0]->newInstance();
 
                 $key = $attribute->key;
+                $value = $object->{$key};
 
-                if (!static::isPropertyReadable($object, $key)) {
+                if (!property_exists($object, $key)) {
                     continue;
                 }
 
-                $value = $object->{$key};
+                $backedEnumType = static::isBackedEnum($property);
 
-                $property->setValue($instance, $value);
+                $property->setValue(
+                    $instance,
+                    $backedEnumType
+                    ? $backedEnumType::from($value)
+                    : $value
+                );
 
                 continue;
             }
@@ -79,19 +86,16 @@ class Mapper
 
                 $key = $attribute->key;
                 $type = $attribute->type;
-
-                if (!static::isPropertyReadable($object, $key)) {
-                    continue;
-                }
-
                 $value = $object->{$key};
 
-                $property->setValue(
-                    $instance,
-                    !is_null($value)
-                    ? static::mapArray((array) $value, $type)
-                    : null
-                );
+                if (property_exists($object, $key)) {
+                    $property->setValue(
+                        $instance,
+                        !is_null($value)
+                        ? static::mapArray((array) $value, $type)
+                        : null
+                    );
+                }
 
                 continue;
             }
@@ -103,19 +107,16 @@ class Mapper
 
                 $key = $attribute->key;
                 $type = static::getPropertyType($property);
-
-                if (!static::isPropertyReadable($object, $key)) {
-                    continue;
-                }
-
                 $value = $object->{$key};
 
-                $property->setValue(
-                    $instance,
-                    !is_null($value)
-                    ? static::mapToClass((object) $value, $type)
-                    : null
-                );
+                if (property_exists($object, $key)) {
+                    $property->setValue(
+                        $instance,
+                        !is_null($value)
+                        ? static::mapToClass((object) $value, $type)
+                        : null
+                    );
+                }
 
                 continue;
             }
@@ -123,7 +124,7 @@ class Mapper
             $key = $property->getName();
 
             if (property_exists($object, $key)) {
-                $property->setValue($object->{$key});
+                $property->setValue($instance, $object->{$key});
             }
         }
 
@@ -170,15 +171,6 @@ class Mapper
         );
     }
 
-    protected static function isPropertyReadable(object $object, string $property): bool
-    {
-        if (!property_exists($object, $property)) {
-            return false;
-        }
-
-        return (new ReflectionProperty($object, $property))->isInitialized($object);
-    }
-
     protected static function getPropertyType(ReflectionProperty $reflectionProperty): ?string
     {
         $reflectionType = $reflectionProperty->getType();
@@ -213,5 +205,26 @@ class Mapper
         }
 
         return true;
+    }
+
+    protected static function isBackedEnum(ReflectionProperty $reflectionProperty): string|false
+    {
+        $type = $reflectionProperty->getType();
+
+        if (!($type instanceof ReflectionNamedType)) {
+            return false;
+        }
+
+        $name = $type->getName();
+
+        if (!$name || $name == 'mixed') {
+            return false;
+        }
+
+        if (!is_subclass_of($name, BackedEnum::class)) {
+            return false;
+        }
+
+        return $name;
     }
 }
