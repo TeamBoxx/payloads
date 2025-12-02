@@ -3,6 +3,7 @@
 namespace Thestoragescanner\Payloads\Dtos;
 
 use JsonSerializable;
+use Thestoragescanner\Payloads\Enums\ClickTypeEnum;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class ClickEvent extends DtoAbstract implements JsonSerializable
@@ -11,5 +12,5 @@ class ClickEvent extends DtoAbstract implements JsonSerializable
     public string $sessionId;
 
     #[MapScalar('type')]
-    public string $type;
+    public ClickTypeEnum $type;
 }
