@@ -47,12 +47,14 @@ class FacilityPage extends DtoAbstract
     #[MapScalar('unique_sizes')]
     public int $uniqueSizes;
 
+    /** @var NearestFacility[] */
     #[MapArray('nearest_facilities', NearestFacility::class)]
     public array $nearestFacilities;
 
     #[MapScalar('highest_price')]
     public float $highestPrice;
 
+    /** @var ImageDTO[] */
     #[MapArray('images', ImageDTO::class)]
     public array $images;
 }
