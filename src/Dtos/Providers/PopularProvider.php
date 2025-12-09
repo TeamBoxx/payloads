@@ -5,7 +5,7 @@ namespace Thestoragescanner\Payloads\Dtos\Providers;
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
-class Provider extends DtoAbstract
+class PopularProvider extends DtoAbstract
 {
     #[MapScalar('id')]
     public int $id;
@@ -22,12 +22,12 @@ class Provider extends DtoAbstract
     #[MapScalar('image')]
     public ?string $image;
 
-    #[MapScalar('verified')]
-    public bool $verified;
-
     #[MapScalar('ssa_member')]
     public bool $ssaMember;
 
-    #[MapScalar('description')]
-    public ?string $description;
+    #[MapScalar('count')]
+    public int $count;
+
+    #[MapScalar('verified')]
+    public bool $verified;
 }
