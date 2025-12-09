@@ -3,6 +3,7 @@
 namespace Thestoragescanner\Payloads\Dtos\Search;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class UnitSearchDto extends DtoAbstract
@@ -105,4 +106,7 @@ class UnitSearchDto extends DtoAbstract
 
     #[MapScalar('deviation')]
     public float $deviation;
+
+    #[MapArray('promotions', 'string')]
+    public array $promotions;
 }
