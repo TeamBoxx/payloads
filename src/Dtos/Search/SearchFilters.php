@@ -9,9 +9,6 @@ use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class SearchFilters extends DtoAbstract
 {
-    /**
-     * Filters for specific entity values
-     */
     #[MapObject('providers')]
     public SearchFiltersProviders $providers;
 
@@ -22,9 +19,6 @@ class SearchFilters extends DtoAbstract
     public SearchFiltersUnits $units;
 
 
-    /**
-     * General filters
-     */
     #[MapScalar('disable_count')]
     public bool $disableCount;
 
