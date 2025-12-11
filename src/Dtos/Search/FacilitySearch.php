@@ -3,6 +3,8 @@
 namespace Thestoragescanner\Payloads\Dtos\Search;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
+use Thestoragescanner\Payloads\Enums\Unit\UnitCategory;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapObject;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
@@ -52,4 +54,7 @@ class FacilitySearch extends DtoAbstract
 
     #[MapObject('unit')]
     public FacilitySearchUnit $unit;
+
+    #[MapArray('categories', UnitCategory::class)]
+    public array $categories;
 }

@@ -3,6 +3,8 @@
 namespace Thestoragescanner\Payloads\Dtos\Facilities;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
+use Thestoragescanner\Payloads\Enums\Unit\UnitCategory;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class Facility extends DtoAbstract
@@ -48,4 +50,7 @@ class Facility extends DtoAbstract
 
     #[MapScalar('website')]
     public ?string $website;
+
+    #[MapArray('categories', UnitCategory::class)]
+    public array $categories;
 }
