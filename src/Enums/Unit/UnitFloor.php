@@ -4,5 +4,6 @@ namespace Thestoragescanner\Payloads\Enums\Unit;
 
 enum UnitFloor: string
 {
-    // Cases here
+    case GROUND_FLOOR = 'ground_floor';
+    case UPPER_FLOORS = 'upper_floor';
 }
