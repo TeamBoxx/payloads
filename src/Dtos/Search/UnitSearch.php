@@ -6,7 +6,7 @@ use Thestoragescanner\Payloads\Dtos\DtoAbstract;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
-class UnitSearchDto extends DtoAbstract
+class UnitSearch extends DtoAbstract
 {
     #[MapScalar('id')]
     public int $id;
