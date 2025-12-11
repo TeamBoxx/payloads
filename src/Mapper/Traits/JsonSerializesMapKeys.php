@@ -2,6 +2,7 @@
 
 namespace Thestoragescanner\Payloads\Mapper\Traits;
 
+use BackedEnum;
 use ReflectionProperty;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapAbstract;
 
@@ -12,6 +13,8 @@ trait JsonSerializesMapKeys
         $assoc = [];
 
         foreach ($this as $key => $value) {
+            $value = is_subclass_of($value, BackedEnum::class) ? $value->value : $value;
+
             $reflectionProperty = new ReflectionProperty($this, $key);
 
             $attributes = $reflectionProperty->getAttributes();
