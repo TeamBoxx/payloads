@@ -155,6 +155,10 @@ class Mapper
                     return (string) $value;
                 }
 
+                if ($type = static::isBackedEnum($type)) {
+                    return $type::from($value);
+                }
+
                 if (is_array($value) || is_object($value)) {
                     if (static::isNumericArray($value)) {
                         return static::mapArray($value, $type);
@@ -207,24 +211,26 @@ class Mapper
         return true;
     }
 
-    protected static function isBackedEnum(ReflectionProperty $reflectionProperty): string|false
+    protected static function isBackedEnum(string|ReflectionProperty $type): string|false
     {
-        $type = $reflectionProperty->getType();
+        if ($type instanceof ReflectionProperty) {
+            $reflectionType = $type->getType();
 
-        if (!($type instanceof ReflectionNamedType)) {
+            if (!($reflectionType instanceof ReflectionNamedType)) {
+                return false;
+            }
+
+            $type = $reflectionType->getName();
+        }
+
+        if (!$type || $type == 'mixed') {
             return false;
         }
 
-        $name = $type->getName();
-
-        if (!$name || $name == 'mixed') {
+        if (!is_subclass_of($type, BackedEnum::class)) {
             return false;
         }
 
-        if (!is_subclass_of($name, BackedEnum::class)) {
-            return false;
-        }
-
-        return $name;
+        return $type;
     }
 }
