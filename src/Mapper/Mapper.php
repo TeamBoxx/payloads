@@ -190,7 +190,7 @@ class Mapper
         }
 
         if (!class_exists($type)) {
-            throw new MapperException('target class does not exist');
+            throw new MapperException("target class {$type} does not exist");
         }
 
         return $type;
