@@ -61,11 +61,12 @@ class Mapper
                 $attribute = $scalarAttributes[0]->newInstance();
 
                 $key = $attribute->key;
-                $value = $object->{$key};
 
                 if (!property_exists($object, $key)) {
                     continue;
                 }
+
+                $value = $object->{$key};
 
                 $backedEnumType = static::isBackedEnum($property);
 
@@ -86,9 +87,10 @@ class Mapper
 
                 $key = $attribute->key;
                 $type = $attribute->type;
-                $value = $object->{$key};
 
                 if (property_exists($object, $key)) {
+                    $value = $object->{$key};
+
                     $property->setValue(
                         $instance,
                         !is_null($value)
@@ -107,9 +109,10 @@ class Mapper
 
                 $key = $attribute->key;
                 $type = static::getPropertyType($property);
-                $value = $object->{$key};
 
                 if (property_exists($object, $key)) {
+                    $value = $object->{$key};
+
                     $property->setValue(
                         $instance,
                         !is_null($value)
