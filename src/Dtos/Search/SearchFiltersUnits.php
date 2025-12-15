@@ -27,7 +27,7 @@ class SearchFiltersUnits extends DtoAbstract
     public Dimension $dimension;
 
     #[MapScalar('available')]
-    public ?bool $showOnlyAvailable = null;
+    public ?bool $available = null;
 
     #[MapScalar('on_request')]
     public ?bool $onRequest = null;
