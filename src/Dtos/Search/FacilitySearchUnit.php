@@ -3,6 +3,8 @@
 namespace Thestoragescanner\Payloads\Dtos\Search;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
+use Thestoragescanner\Payloads\Enums\Unit\UnitCategory;
+use Thestoragescanner\Payloads\Enums\Unit\UnitFloor;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
@@ -40,4 +42,10 @@ class FacilitySearchUnit extends DtoAbstract
 
     #[MapArray('promotions', 'string')]
     public array $promotions;
+
+    #[MapScalar('category')]
+    public ?UnitCategory $category;
+
+    #[MapScalar('floor')]
+    public ?UnitFloor $floor;
 }
