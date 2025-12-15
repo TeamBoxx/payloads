@@ -3,6 +3,7 @@
 namespace Thestoragescanner\Payloads\Dtos\Search;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
+use Thestoragescanner\Payloads\Enums\MeasurementSystem;
 use Thestoragescanner\Payloads\Enums\SortStrategy;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapObject;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
@@ -33,4 +34,7 @@ class SearchFilters extends DtoAbstract
 
     #[MapScalar('ip_address')]
     public string $ipAddress;
+
+    #[MapScalar('measurement_system')]
+    public MeasurementSystem $measurementSystem;
 }

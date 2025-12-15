@@ -4,7 +4,6 @@ namespace Thestoragescanner\Payloads\Dtos\Search;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
 use Thestoragescanner\Payloads\Enums\Dimension;
-use Thestoragescanner\Payloads\Enums\MeasurementSystem;
 use Thestoragescanner\Payloads\Enums\Unit\UnitCategory;
 use Thestoragescanner\Payloads\Enums\Unit\UnitFloor;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
@@ -31,9 +30,6 @@ class SearchFiltersUnits extends DtoAbstract
 
     #[MapScalar('on_request')]
     public ?bool $onRequest = null;
-
-    #[MapScalar('measurement_system')]
-    public MeasurementSystem $measurementSystem;
 
     #[MapScalar('category')]
     public ?UnitCategory $category = null;
