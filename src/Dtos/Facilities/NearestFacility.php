@@ -1,13 +1,15 @@
 <?php
 
-namespace Thestoragescanner\Payloads\Dtos\Search;
+namespace Thestoragescanner\Payloads\Dtos\Facilities;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
-use Thestoragescanner\Payloads\Mapper\Attributes\MapObject;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
-class FacilitySearchDto extends DtoAbstract
+class NearestFacility extends DtoAbstract
 {
+    #[MapScalar('distance')]
+    public float $distance;
+
     #[MapScalar('id')]
     public int $id;
 
@@ -24,10 +26,10 @@ class FacilitySearchDto extends DtoAbstract
     public string $city;
 
     #[MapScalar('address')]
-    public string $address;
+    public ?string $address;
 
     #[MapScalar('zipcode')]
-    public string $zipcode;
+    public ?string $zipcode;
 
     #[MapScalar('lat')]
     public float $lat;
@@ -35,18 +37,9 @@ class FacilitySearchDto extends DtoAbstract
     #[MapScalar('long')]
     public float $long;
 
-    #[MapScalar('verified')]
-    public bool $verified;
-
     #[MapScalar('pickup_and_delivery')]
     public bool $pickupAndDelivery;
 
-    #[MapObject('provider')]
-    public FacilitySearchProviderDto $provider;
-
-    #[MapObject('unit')]
-    public FacilitySearchUnitDto $unit;
-
-    #[MapScalar('distance')]
-    public float $distance;
+    #[MapScalar('min_price')]
+    public ?float $minPrice;
 }

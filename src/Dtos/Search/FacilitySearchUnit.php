@@ -3,9 +3,10 @@
 namespace Thestoragescanner\Payloads\Dtos\Search;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
-class FacilitySearchUnitDto extends DtoAbstract
+class FacilitySearchUnit extends DtoAbstract
 {
     #[MapScalar('id')]
     public int $id;
@@ -35,5 +36,8 @@ class FacilitySearchUnitDto extends DtoAbstract
     public ?float $estimatedPriceRangeHigh;
 
     #[MapScalar('on_request')]
-    public bool $onRequest;
+    public bool $on_request;
+
+    #[MapArray('promotions', 'string')]
+    public array $promotions;
 }
