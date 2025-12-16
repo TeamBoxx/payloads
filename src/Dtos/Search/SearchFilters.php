@@ -21,16 +21,16 @@ class SearchFilters extends DtoAbstract
 
 
     #[MapScalar('disable_count')]
-    public bool $disableCount;
+    public bool $disableCount = false;
 
     #[MapScalar('sort')]
     public SortStrategy $sort;
 
     #[MapScalar('page')]
-    public int $page;
+    public int $page = 1;
 
     #[MapScalar('limit')]
-    public int $limit;
+    public int $limit = PHP_INT_MAX;
 
     #[MapScalar('measurement_system')]
     public ?MeasurementSystem $measurementSystem = null;
