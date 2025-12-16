@@ -56,8 +56,8 @@ class Facility extends DtoAbstract
     public array $categories;
 
     #[MapScalar('reviews_rating_count')]
-    public int $reviewsRatingCount;
+    public int $reviewsRatingCount = 0;
 
     #[MapScalar('reviews_rating_average')]
-    public ?float $reviewsRatingAverage;
+    public ?float $reviewsRatingAverage = null;
 }
