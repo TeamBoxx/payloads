@@ -32,9 +32,6 @@ class SearchFilters extends DtoAbstract
     #[MapScalar('limit')]
     public int $limit;
 
-    #[MapScalar('ip_address')]
-    public string $ipAddress;
-
     #[MapScalar('measurement_system')]
-    public MeasurementSystem $measurementSystem;
+    public ?MeasurementSystem $measurementSystem = null;
 }
