@@ -11,13 +11,13 @@ use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 class SearchFiltersFacilities extends DtoAbstract
 {
     #[MapScalar('lat')]
-    public float $lat;
+    public ?float $lat = null;
 
     #[MapScalar('long')]
-    public float $long;
+    public ?float $long = null;
 
     #[MapScalar('radius')]
-    public float $radius;
+    public ?float $radius = null;
 
     #[MapScalar('pickup_and_delivery')]
     public ?bool $pickupAndDelivery = null;
