@@ -42,7 +42,9 @@ class FacilityPage extends DtoAbstract
 
     #[MapScalar('avg_size_cubic')]
     public ?float $avgSizeCubic;
-    public ?CheapestUnit $cheapest_unit;
+
+    #[MapObject('cheapest_unit')]
+    public ?CheapestUnit $cheapestUnit;
 
     #[MapScalar('unique_sizes')]
     public int $uniqueSizes;

@@ -51,6 +51,7 @@ class Facility extends DtoAbstract
     #[MapScalar('website')]
     public ?string $website;
 
+    /** @var UnitCategory[] */
     #[MapArray('categories', UnitCategory::class)]
     public array $categories;
 }
