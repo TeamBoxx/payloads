@@ -73,7 +73,7 @@ class Mapper
                 $property->setValue(
                     $instance,
                     $backedEnumType
-                    ? $backedEnumType::from($value)
+                    ? !is_null($value) ? $backedEnumType::from($value) : null
                     : $value
                 );
 
