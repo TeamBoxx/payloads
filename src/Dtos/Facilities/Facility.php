@@ -54,4 +54,10 @@ class Facility extends DtoAbstract
     /** @var UnitCategory[] */
     #[MapArray('categories', UnitCategory::class)]
     public array $categories;
+
+    #[MapScalar('reviews_rating_count')]
+    public int $reviewsRatingCount;
+
+    #[MapScalar('reviews_rating_average')]
+    public ?float $reviewsRatingAverage;
 }

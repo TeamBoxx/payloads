@@ -59,4 +59,8 @@ class FacilityPage extends DtoAbstract
     /** @var ImageDTO[] */
     #[MapArray('images', ImageDTO::class)]
     public array $images;
+
+    /** @var FacilityReview[] */
+    #[MapArray('reviews', FacilityReview::class)]
+    public array $reviews;
 }
