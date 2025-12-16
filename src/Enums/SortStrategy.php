@@ -4,7 +4,7 @@ namespace Thestoragescanner\Payloads\Enums;
 
 enum SortStrategy: string
 {
-    case DEVIATION = 'deviation';
+    case RELEVANCE = 'relevance';
     case PRICE_LOW_TO_HIGH = 'price_lth';
     case PRICE_HIGH_TO_LOW = 'price_htl';
     case SIZE_LOW_TO_HIGH = 'size_lth';
