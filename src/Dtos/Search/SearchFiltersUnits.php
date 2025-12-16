@@ -6,6 +6,7 @@ use Thestoragescanner\Payloads\Dtos\DtoAbstract;
 use Thestoragescanner\Payloads\Enums\Dimension;
 use Thestoragescanner\Payloads\Enums\Unit\UnitCategory;
 use Thestoragescanner\Payloads\Enums\Unit\UnitFloor;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class SearchFiltersUnits extends DtoAbstract
@@ -31,8 +32,9 @@ class SearchFiltersUnits extends DtoAbstract
     #[MapScalar('on_request')]
     public ?bool $onRequest = null;
 
-    #[MapScalar('category')]
-    public ?UnitCategory $category = null;
+    /** @var UnitCategory[] */
+    #[MapArray('categories', UnitCategory::class)]
+    public ?array $categories = [];
 
     #[MapScalar('floor')]
     public ?UnitFloor $floor = null;

@@ -55,6 +55,7 @@ class FacilitySearch extends DtoAbstract
     #[MapObject('unit')]
     public FacilitySearchUnit $unit;
 
+    /** @var UnitCategory[] */
     #[MapArray('categories', UnitCategory::class)]
     public array $categories;
 }

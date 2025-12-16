@@ -40,6 +40,7 @@ class FacilitySearchUnit extends DtoAbstract
     #[MapScalar('on_request')]
     public bool $on_request;
 
+    /** @var string[] */
     #[MapArray('promotions', 'string')]
     public array $promotions;
 

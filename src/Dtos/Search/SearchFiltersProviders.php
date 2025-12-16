@@ -15,6 +15,7 @@ class SearchFiltersProviders extends DtoAbstract
     #[MapScalar('ssa_member')]
     public ?bool $ssaMember = null;
 
+    /** @var int[] */
     #[MapArray('provider_ids', 'int')]
     public array $providerIds = [];
 }

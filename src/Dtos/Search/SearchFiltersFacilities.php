@@ -22,6 +22,7 @@ class SearchFiltersFacilities extends DtoAbstract
     #[MapScalar('pickup_and_delivery')]
     public ?bool $pickupAndDelivery = null;
 
+    /** @var int[] */
     #[MapArray('facility_ids', 'int')]
     public array $facilityIds = [];
 
