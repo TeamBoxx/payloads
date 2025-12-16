@@ -24,7 +24,7 @@ class SearchFilters extends DtoAbstract
     public bool $disableCount = false;
 
     #[MapScalar('sort')]
-    public SortStrategy $sort;
+    public SortStrategy $sort = SortStrategy::RELEVANCE;
 
     #[MapScalar('page')]
     public int $page = 1;
