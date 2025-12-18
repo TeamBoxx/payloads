@@ -21,7 +21,7 @@ class SearchFiltersUnits extends DtoAbstract
     public float $sizeMin = 0.1;
 
     #[MapScalar('size_max')]
-    public float $sizeMax = PHP_INT_MAX;
+    public ?float $sizeMax = PHP_INT_MAX;
 
     #[MapScalar('dimension')]
     public Dimension $dimension = Dimension::SQUARED;
