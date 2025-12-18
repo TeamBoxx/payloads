@@ -15,7 +15,7 @@ class SearchFiltersUnits extends DtoAbstract
     public float $priceMin = 0.1;
 
     #[MapScalar('price_max')]
-    public float $priceMax = PHP_INT_MAX;
+    public ?float $priceMax = PHP_INT_MAX;
 
     #[MapScalar('size_min')]
     public float $sizeMin = 0.1;
