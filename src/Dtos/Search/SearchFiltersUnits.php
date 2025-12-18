@@ -38,4 +38,7 @@ class SearchFiltersUnits extends DtoAbstract
 
     #[MapScalar('floor')]
     public ?UnitFloor $floor = null;
+
+    #[MapScalar('outdoor')]
+    public ?bool $outdoor = null;
 }
