@@ -117,4 +117,7 @@ class UnitSearch extends DtoAbstract
 
     #[MapScalar('floor')]
     public ?UnitFloor $floor;
+
+    #[MapScalar('outdoor')]
+    public ?bool $outdoor;
 }
