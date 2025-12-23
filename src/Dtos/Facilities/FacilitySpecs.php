@@ -49,7 +49,7 @@ class FacilitySpecs extends DtoAbstract
     #[MapScalar('sunday_close')]
     public ?string $sundayClose = null;
 
-    #[MapScalar('spec_247_access')]
+    #[MapScalar('spec_247access')]
     public ?bool $spec247Access = null;
 
     #[MapScalar('spec_drivein')]
