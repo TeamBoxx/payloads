@@ -24,7 +24,7 @@ class Mapper
             return $value;
         }
 
-        return is_array($value)
+        return is_array($value) && array_is_list($value)
             ? array_map(
                 function (mixed $value) use ($class): mixed {
                     if (is_null($value)) {
@@ -37,7 +37,7 @@ class Mapper
                 },
                 $value
             )
-            : static::mapToClass($value, $class);
+            : static::mapToClass((object) $value, $class);
     }
 
     protected static function mapToClass(?object $object, string $class): ?object
