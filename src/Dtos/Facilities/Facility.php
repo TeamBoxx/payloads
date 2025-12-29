@@ -51,10 +51,6 @@ class Facility extends DtoAbstract
     #[MapScalar('website')]
     public ?string $website;
 
-    /** @var UnitType[] */
-    #[MapArray('types', UnitType::class)]
-    public array $types;
-
     #[MapScalar('reviews_rating_count')]
     public int $reviewsRatingCount = 0;
 

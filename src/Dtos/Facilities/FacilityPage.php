@@ -6,6 +6,7 @@ use Thestoragescanner\Payloads\Dtos\DtoAbstract;
 use Thestoragescanner\Payloads\Dtos\ImageDTO;
 use Thestoragescanner\Payloads\Dtos\Providers\Provider;
 use Thestoragescanner\Payloads\Dtos\Units\CheapestUnit;
+use Thestoragescanner\Payloads\Enums\Unit\UnitType;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapObject;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
@@ -59,6 +60,10 @@ class FacilityPage extends DtoAbstract
     /** @var ImageDTO[] */
     #[MapArray('images', ImageDTO::class)]
     public array $images;
+
+    /** @var UnitType[] */
+    #[MapArray('types', UnitType::class)]
+    public array $types;
 
     /** @var FacilityReview[] */
     #[MapArray('reviews', FacilityReview::class)]
