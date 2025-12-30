@@ -158,8 +158,8 @@ class Mapper
                     return (string) $value;
                 }
 
-                if ($type = static::isBackedEnum($type)) {
-                    return $type::from($value);
+                if ($backedEnumtype = static::isBackedEnum($type)) {
+                    return $backedEnumtype::from($value);
                 }
 
                 if (is_array($value) || is_object($value)) {
