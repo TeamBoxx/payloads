@@ -8,11 +8,20 @@ use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 class FacilityReview extends DtoAbstract
 {
     #[MapScalar('name')]
-    public string $name;
+    public ?string $name = null;
 
-    #[MapScalar('text')]
-    public string $text;
+    #[MapScalar('original_text')]
+    public ?string $originalText = null;
+
+    #[MapScalar('english_text')]
+    public ?string $englishText = null;
 
     #[MapScalar('rating')]
-    public int $rating;
+    public ?int $rating = null;
+
+    #[MapScalar('image_url')]
+    public ?string $imageUrl = null;
+
+    #[MapScalar('published_at')]
+    public string $publishedAt;
 }

@@ -58,4 +58,10 @@ class FacilitySearch extends DtoAbstract
     /** @var UnitType[] */
     #[MapArray('types', UnitType::class)]
     public array $types;
+
+    #[MapScalar('reviews_rating_count')]
+    public int $reviewsRatingCount = 0;
+
+    #[MapScalar('reviews_rating_average')]
+    public ?float $reviewsRatingAverage = null;
 }
