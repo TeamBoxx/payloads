@@ -19,7 +19,7 @@ class Facility extends DtoAbstract
     public string $country;
 
     #[MapScalar(key: 'country_code')]
-    public string $country_code;
+    public string $countryCode;
 
     #[MapScalar('city')]
     public string $city;
