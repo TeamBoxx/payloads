@@ -60,7 +60,7 @@ class FacilitySearch extends DtoAbstract
     public array $types;
 
     #[MapScalar('reviews_rating_count')]
-    public int $reviewsRatingCount = 0;
+    public ?int $reviewsRatingCount = 0;
 
     #[MapScalar('reviews_rating_average')]
     public ?float $reviewsRatingAverage = null;

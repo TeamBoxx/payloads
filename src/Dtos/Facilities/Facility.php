@@ -52,7 +52,7 @@ class Facility extends DtoAbstract
     public ?string $website;
 
     #[MapScalar('reviews_rating_count')]
-    public int $reviewsRatingCount = 0;
+    public ?int $reviewsRatingCount = 0;
 
     #[MapScalar('reviews_rating_average')]
     public ?float $reviewsRatingAverage = null;
