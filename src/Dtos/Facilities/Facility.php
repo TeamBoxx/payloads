@@ -51,6 +51,9 @@ class Facility extends DtoAbstract
     #[MapScalar('website')]
     public ?string $website;
 
+    #[MapScalar('google_place_id')]
+    public ?string $googlePlaceId = null;
+
     #[MapScalar('reviews_rating_count')]
     public ?int $reviewsRatingCount = 0;
 
