@@ -56,4 +56,7 @@ class Facility extends DtoAbstract
 
     #[MapScalar('reviews_rating_average')]
     public ?float $reviewsRatingAverage = null;
+
+    #[MapScalar('reviews_uri')]
+    public ?string $reviewsUri = null;
 }
