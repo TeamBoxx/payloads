@@ -117,7 +117,20 @@ class FeatureAccess
 
         FeatureEnum::ADS_DISABLED->value => [
             SubscriptionEnum::FREE,
-        ]
+        ],
+
+        FeatureEnum::DATA_ANALYTICS_COMPETITORS->value => [
+            SubscriptionEnum::BASIC,
+            SubscriptionEnum::RECOMMENDED,
+        ],
+
+        FeatureEnum::DATA_ANALYTICS_MARKET_ANALYSES->value => [
+            SubscriptionEnum::RECOMMENDED,
+        ],
+
+        FeatureEnum::DATA_ANALYTICS_PRICING_RECOMMENDATIONS->value => [
+            SubscriptionEnum::RECOMMENDED,
+        ],
     ];
 
     protected const array EXCLUDED_ROLES_MVP_ADMIN = [

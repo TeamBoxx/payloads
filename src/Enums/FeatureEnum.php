@@ -4,6 +4,7 @@ namespace Thestoragescanner\Payloads\Enums;
 
 enum FeatureEnum: string
 {
+    // General Admin/Website features
     case PROVIDER_EDIT = 'provider_edit';
     case PROVIDER_WEBSITE_LINK = 'provider_website_link';
     case FACILITY_EDIT = 'facility_edit';
@@ -17,11 +18,15 @@ enum FeatureEnum: string
     case UNIT_PROMOTIONS = 'unit_promotions';
     case UPLIFT_SEARCH = 'uplift_search';
 
-    // TODO: after MVP implement
     case FACILITY_DESCRIPTION = 'facility_description';
     case PARTNERS_PROMOTIONS = 'partners_promotions';
     case GOOGLE_REVIEWS = 'google_reviews';
     case ADS_DISABLED = 'ads_disabled';
+
+    // Data Analytics Admin
+    case DATA_ANALYTICS_COMPETITORS = 'competitor_insights';
+    case DATA_ANALYTICS_MARKET_ANALYSES = 'market_analyses';
+    case DATA_ANALYTICS_PRICING_RECOMMENDATIONS = 'pricing_recommendations';
 
     public function label(): string
     {
@@ -44,6 +49,10 @@ enum FeatureEnum: string
             self::PARTNERS_PROMOTIONS => 'Partners Promotions',
             self::GOOGLE_REVIEWS => 'Google Reviews Optionality',
             self::ADS_DISABLED => 'Disable Ads',
+
+            self::DATA_ANALYTICS_COMPETITORS => 'Competitors Insights',
+            self::DATA_ANALYTICS_MARKET_ANALYSES => 'Markets Analyses',
+            self::DATA_ANALYTICS_PRICING_RECOMMENDATIONS => 'Pricing Recommendations',
         };
     }
 }
