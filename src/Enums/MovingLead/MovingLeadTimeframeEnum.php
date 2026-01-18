@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Enums\MovingLead;
+namespace Thestoragescanner\Payloads\Enums\MovingLead;
 
 enum MovingLeadTimeframeEnum: string
 {

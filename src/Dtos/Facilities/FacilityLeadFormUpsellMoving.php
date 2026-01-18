@@ -2,9 +2,9 @@
 
 namespace Thestoragescanner\Payloads\Dtos\Facilities;
 
-use App\Enums\MovingLead\MovingLeadCustomerTypeEnum;
-use App\Enums\MovingLead\MovingLeadSizeEnum;
-use App\Enums\MovingLead\MovingLeadTimeframeEnum;
+use Thestoragescanner\Payloads\Enums\MovingLead\MovingLeadCustomerTypeEnum;
+use Thestoragescanner\Payloads\Enums\MovingLead\MovingLeadSizeEnum;
+use Thestoragescanner\Payloads\Enums\MovingLead\MovingLeadTimeframeEnum;
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
