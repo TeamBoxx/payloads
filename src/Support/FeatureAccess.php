@@ -19,6 +19,9 @@ class FeatureAccess
         ],
 
         FeatureEnum::PROVIDER_WEBSITE_LINK->value => [
+            SubscriptionEnum::FREE,
+            SubscriptionEnum::PAY_PER_CONVERSION,
+            SubscriptionEnum::PAY_PER_LEAD,
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED
@@ -36,6 +39,8 @@ class FeatureAccess
         ],
 
         FeatureEnum::FACILITY_OPENING_HOURS->value => [
+            SubscriptionEnum::FREE,
+            SubscriptionEnum::PAY_PER_CONVERSION,
             SubscriptionEnum::PAY_PER_LEAD,
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
@@ -44,6 +49,8 @@ class FeatureAccess
         ],
 
         FeatureEnum::FACILITY_SPECS->value => [
+            SubscriptionEnum::FREE,
+            SubscriptionEnum::PAY_PER_CONVERSION,
             SubscriptionEnum::PAY_PER_LEAD,
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
@@ -52,6 +59,10 @@ class FeatureAccess
         ],
 
         FeatureEnum::FACILITY_PHOTOS->value => [
+            SubscriptionEnum::FREE,
+            SubscriptionEnum::PAY_PER_CONVERSION,
+            SubscriptionEnum::PAY_PER_LEAD,
+            SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
             // SubscriptionEnum::PREMIUM,
@@ -79,6 +90,7 @@ class FeatureAccess
         ],
 
         FeatureEnum::UNIT_EDIT->value => [
+            SubscriptionEnum::FREE,
             SubscriptionEnum::PAY_PER_CONVERSION,
             SubscriptionEnum::PAY_PER_LEAD,
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
@@ -95,6 +107,11 @@ class FeatureAccess
         ],
 
         FeatureEnum::UNIT_PROMOTIONS->value => [
+            SubscriptionEnum::FREE,
+            SubscriptionEnum::PAY_PER_CONVERSION,
+            SubscriptionEnum::PAY_PER_LEAD,
+            SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
+            SubscriptionEnum::BASIC,
             SubscriptionEnum::RECOMMENDED,
             // SubscriptionEnum::PREMIUM,
         ],
