@@ -15,10 +15,10 @@ enum SubscriptionEnum: string
     case PAY_PER_CLICK = 'pay_per_click';
     case PAY_PER_LEAD = 'pay_per_lead';
     case PAY_PER_LEAD_AND_CLICK = 'pay_per_lead_and_click';
-    case BASIC = 'basic';
+    case BASIC = 'basic_pplc';
     case BASIC_PPC = 'basic_ppc';
     case BASIC_PPL = 'basic_ppl';
-    case RECOMMENDED = 'recommended';
+    case RECOMMENDED = 'recommended_pplc';
     case RECOMMENDED_PPC = 'recommended_ppc';
     case RECOMMENDED_PPL = 'recommended_ppl';
 
