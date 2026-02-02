@@ -19,7 +19,6 @@ class FeatureAccess
         ],
 
         FeatureEnum::PROVIDER_WEBSITE_LINK->value => [
-            SubscriptionEnum::FREE,
             SubscriptionEnum::PAY_PER_CONVERSION,
             SubscriptionEnum::PAY_PER_LEAD,
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
