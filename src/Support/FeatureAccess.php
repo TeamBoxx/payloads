@@ -96,6 +96,7 @@ class FeatureAccess
 
         FeatureEnum::FACILITY_PHONE_NUMBER->value => [
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
+            SubscriptionEnum::PAY_PER_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::BASIC_PPC,
             SubscriptionEnum::RECOMMENDED,
@@ -109,10 +110,8 @@ class FeatureAccess
             SubscriptionEnum::PAY_PER_LEAD,
             SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
-            SubscriptionEnum::BASIC_PPC,
             SubscriptionEnum::BASIC_PPL,
             SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
             // SubscriptionEnum::PREMIUM,
         ],
