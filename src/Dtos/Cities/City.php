@@ -36,4 +36,7 @@ class City extends DtoAbstract
 
     #[MapScalar('radius')]
     public float $radius;
+
+    #[MapScalar('description')]
+    public ?string $description = null;
 }

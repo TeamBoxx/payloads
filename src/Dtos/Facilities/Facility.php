@@ -59,4 +59,7 @@ class Facility extends DtoAbstract
 
     #[MapScalar('reviews_url')]
     public ?string $reviewsUrl = null;
+
+    #[MapScalar('description')]
+    public ?string $description = null;
 }
