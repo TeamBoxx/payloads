@@ -48,4 +48,7 @@ class SurroundingFacility extends DtoAbstract
 
     #[MapScalar('country_code')]
     public string $countryCode;
+
+    #[MapScalar('distance')]
+    public float $distance;
 }
