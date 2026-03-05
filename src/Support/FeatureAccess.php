@@ -104,18 +104,6 @@ class FeatureAccess
             // SubscriptionEnum::PREMIUM,
         ],
 
-        FeatureEnum::FACILITY_LEAD_FORM->value => [
-            SubscriptionEnum::SPONSORED,
-            SubscriptionEnum::PAY_PER_CONVERSION,
-            SubscriptionEnum::PAY_PER_LEAD,
-            SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
-            SubscriptionEnum::BASIC,
-            SubscriptionEnum::BASIC_PPL,
-            SubscriptionEnum::RECOMMENDED,
-            SubscriptionEnum::RECOMMENDED_PPL,
-            // SubscriptionEnum::PREMIUM,
-        ],
-
         FeatureEnum::FACILITY_DESCRIPTION->value => [
             // SubscriptionEnum::PREMIUM,
         ],

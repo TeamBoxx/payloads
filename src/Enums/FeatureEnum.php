@@ -38,7 +38,6 @@ enum FeatureEnum: string
             self::FACILITY_SPECS => 'Facility Specs Editable',
             self::FACILITY_PHOTOS => 'Facility Photos',
             self::FACILITY_PHONE_NUMBER => 'Facility Phone Number',
-            self::FACILITY_LEAD_FORM => 'Facility Lead Form',
             self::UNIT_EDIT => 'Unit Details Editable',
             self::UNIT_CLICKABLE_LINK => 'Unit Clickable to Website',
             self::UNIT_PROMOTIONS => 'Unit Promotions',
