@@ -46,12 +46,13 @@ enum QuickRequestSizeRangeEnum: string
     public function mapToSquareMeterEnum(): FacilityLeadFormSizeEnum
     {
         return match($this) {
-            self::XS => FacilityLeadFormSizeEnum::SIZE_2,                       // 0-5 m3 is roughly a small locker/unit
-            self::S => FacilityLeadFormSizeEnum::SIZE_3,                        // 5-10 m3 fits about 3 m2
-            self::M => FacilityLeadFormSizeEnum::SIZE_6,                        // 10-20 m3 is a standard small room
-            self::L => FacilityLeadFormSizeEnum::SIZE_10,                       // 20-40 m3 is roughly 10 m2
-            self::XL => FacilityLeadFormSizeEnum::SIZE_15_TO_20,                // 40-60 m3 is a large unit
-            self::XXL, self::XXXL => FacilityLeadFormSizeEnum::SIZE_25_PLUS,    // 60-100 m3 exceeds 25 m2 and 100+ m3 definitely 25+ m2
+            self::XS => FacilityLeadFormSizeEnum::SIZE_1,
+            self::S => FacilityLeadFormSizeEnum::SIZE_3,
+            self::M => FacilityLeadFormSizeEnum::SIZE_5,
+            self::L => FacilityLeadFormSizeEnum::SIZE_10,
+            self::XL => FacilityLeadFormSizeEnum::SIZE_15_TO_20,
+            self::XXL => FacilityLeadFormSizeEnum::SIZE_20_TO_25,
+            self::XXXL => FacilityLeadFormSizeEnum::SIZE_25_PLUS,
         };
     }
 }
