@@ -11,7 +11,7 @@ abstract class DtoAbstract implements JsonSerializable
 {
     use JsonSerializesMapKeys;
 
-    public function fromFetchObject(object $stdClass, bool $snakeCaseToCamelCase = true): static
+    public static function fromFetchObject(object $stdClass, bool $snakeCaseToCamelCase = true): static
     {
         return static::fromFetchAssoc(
             (array) $stdClass,
@@ -19,7 +19,7 @@ abstract class DtoAbstract implements JsonSerializable
         );
     }
 
-    public function fromFetchAssoc(array $assoc, bool $snakeCaseToCamelCase = true): static
+    public static function fromFetchAssoc(array $assoc, bool $snakeCaseToCamelCase = true): static
     {
         if ($snakeCaseToCamelCase) {
             foreach ($assoc as $key => $value) {
@@ -34,7 +34,7 @@ abstract class DtoAbstract implements JsonSerializable
         return static::fromAssoc($assoc);
     }
 
-    public function fromAssoc(array $assoc): static
+    public static function fromAssoc(array $assoc): static
     {
         $instance = new static();
 
@@ -56,14 +56,12 @@ abstract class DtoAbstract implements JsonSerializable
 
             $property->setAccessible(true);
 
-            // Handle uninitialized typed properties (PHP 7.4+)
             $isInitialized = method_exists($property, 'isInitialized')
                 ? $property->isInitialized($this)
                 : true;
 
             $value = $isInitialized ? $property->getValue($this) : null;
 
-            // 1️⃣ Apply default value if null
             if ($value === null) {
                 $defaultProperties = $property
                     ->getDeclaringClass()
@@ -75,13 +73,11 @@ abstract class DtoAbstract implements JsonSerializable
                 }
             }
 
-            // 2️⃣ Recurse into nested DTOs
             if ($value instanceof self) {
                 $value->setDefaultIfNull();
                 continue;
             }
 
-            // 3️⃣ Recurse into arrays (deep)
             if (is_array($value)) {
                 $this->applyDefaultsToArray($value);
                 $property->setValue($this, $value);
