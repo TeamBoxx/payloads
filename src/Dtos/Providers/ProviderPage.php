@@ -2,6 +2,7 @@
 
 namespace Thestoragescanner\Payloads\Dtos\Providers;
 
+use Thestoragescanner\Payloads\Dtos\CheapestSizes\CheapestSizeSegment;
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapObject;
@@ -15,4 +16,8 @@ class ProviderPage extends DtoAbstract
     /** @var ProviderPageFacility[]  */
     #[MapArray('facilities', ProviderPageFacility::class)]
     public array $facilities;
+
+    /** @var CheapestSizeSegment[] */
+    #[MapArray('cheapest_size_statistics', CheapestSizeSegment::class)]
+    public array $cheapestSizeStatistics;
 }

@@ -2,6 +2,7 @@
 
 namespace Thestoragescanner\Payloads\Dtos\Cities;
 
+use Thestoragescanner\Payloads\Dtos\CheapestSizes\CheapestSizeSegment;
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
 use Thestoragescanner\Payloads\Dtos\Facilities\SurroundingFacility;
 use Thestoragescanner\Payloads\Dtos\Providers\PopularProvider;
@@ -44,6 +45,10 @@ class CityPage extends DtoAbstract
     /** @var BiggestCity[] */
     #[MapArray('three_biggest_cities', BiggestCity::class)]
     public array $threeBiggestCities;
+
+    /** @var CheapestSizeSegment[] */
+    #[MapArray('cheapest_size_statistics', CheapestSizeSegment::class)]
+    public array $cheapestSizeStatistics;
 
     #[MapObject('averages')]
     public ?CityAverages $averages;
