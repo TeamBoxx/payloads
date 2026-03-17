@@ -7,6 +7,9 @@ use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class CheapestSizeUnit extends DtoAbstract
 {
+    #[MapScalar('provider_id')]
+    public int $providerId;
+
     #[MapScalar('provider_name')]
     public string $providerName;
 
