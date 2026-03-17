@@ -3,14 +3,14 @@
 namespace Thestoragescanner\Payloads\Dtos\CheapestSizes;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
-use Thestoragescanner\Payloads\Enums\CheapestSizeRange;
+use Thestoragescanner\Payloads\Enums\SizeRange;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapArray;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class CheapestSizeSegment extends DtoAbstract
 {
     #[MapScalar('range')]
-    public CheapestSizeRange $type;
+    public SizeRange $type;
 
     #[MapScalar('size_from')]
     public float $sizeFrom;
