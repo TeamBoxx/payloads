@@ -5,21 +5,23 @@ namespace Thestoragescanner\Payloads\Dtos;
 use JsonSerializable;
 use ReflectionObject;
 use Thestoragescanner\Payloads\Helpers\Strings;
+use Thestoragescanner\Payloads\Mapper\Mapper;
 use Thestoragescanner\Payloads\Mapper\Traits\JsonSerializesMapKeys;
 
 abstract class DtoAbstract implements JsonSerializable
 {
     use JsonSerializesMapKeys;
 
-    public static function fromFetchObject(object $stdClass, bool $snakeCaseToCamelCase = true): static
+    public static function fromFetchObject(object $stdClass, bool $snakeCaseToCamelCase = true, bool $useMapper = true): static
     {
         return static::fromFetchAssoc(
             (array) $stdClass,
-            $snakeCaseToCamelCase
+            $snakeCaseToCamelCase,
+            $useMapper
         );
     }
 
-    public static function fromFetchAssoc(array $assoc, bool $snakeCaseToCamelCase = true): static
+    public static function fromFetchAssoc(array $assoc, bool $snakeCaseToCamelCase = true, bool $useMapper = true): static
     {
         if ($snakeCaseToCamelCase) {
             foreach ($assoc as $key => $value) {
@@ -31,11 +33,15 @@ abstract class DtoAbstract implements JsonSerializable
             }
         }
 
-        return static::fromAssoc($assoc);
+        return static::fromAssoc($assoc, $useMapper);
     }
 
-    public static function fromAssoc(array $assoc): static
+    public static function fromAssoc(array $assoc, bool $useMapper = true): static
     {
+        if ($useMapper) {
+            return Mapper::toObject($assoc, static::class);
+        }
+
         $instance = new static();
 
         foreach ($assoc as $key => $value) {
