@@ -16,6 +16,9 @@ class CheapestSizeUnit extends DtoAbstract
     #[MapScalar('facility_id')]
     public int $facilityId;
 
+    #[MapScalar('facility_name')]
+    public string $facilityName;
+
     #[MapScalar('city')]
     public string $city;
 
