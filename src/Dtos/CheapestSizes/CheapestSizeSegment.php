@@ -10,7 +10,7 @@ use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 class CheapestSizeSegment extends DtoAbstract
 {
     #[MapScalar('range')]
-    public SizeRange $type;
+    public SizeRange $range;
 
     #[MapScalar('size_from')]
     public float $sizeFrom;
