@@ -20,13 +20,13 @@ class CheapestSizeUnit extends DtoAbstract
     public string $facilityName;
 
     #[MapScalar('city')]
-    public string $city;
+    public ?string $city;
 
     #[MapScalar('address')]
-    public string $address;
+    public ?string $address;
 
     #[MapScalar('zipcode')]
-    public string $zipcode;
+    public ?string $zipcode;
 
     #[MapScalar('size_squared')]
     public float $sizeSquared;
