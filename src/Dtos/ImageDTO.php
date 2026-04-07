@@ -8,4 +8,10 @@ class ImageDTO
 {
     #[MapScalar('url')]
     public string $url;
+
+    #[MapScalar('width')]
+    public int $width;
+
+    #[MapScalar('height')]
+    public int $height;
 }
