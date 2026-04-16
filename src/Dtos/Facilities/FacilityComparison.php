@@ -4,6 +4,7 @@ namespace Thestoragescanner\Payloads\Dtos\Facilities;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
 use Thestoragescanner\Payloads\Dtos\ImageDTO;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapObject;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class FacilityComparison extends DtoAbstract
@@ -44,7 +45,7 @@ class FacilityComparison extends DtoAbstract
     #[MapScalar('pickup_and_delivery')]
     public bool $pickupAndDelivery;
 
-    #[MapScalar('image')]
+    #[MapObject('image')]
     public ?ImageDTO $image = null;
 
     #[MapScalar('distance')]
