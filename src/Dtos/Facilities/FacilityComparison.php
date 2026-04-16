@@ -28,7 +28,7 @@ class FacilityComparison extends DtoAbstract
     public bool $facilityVerified;
 
     #[MapScalar('country_code')]
-    public string $country_code;
+    public string $countryCode;
 
     #[MapScalar('city')]
     public string $city;
