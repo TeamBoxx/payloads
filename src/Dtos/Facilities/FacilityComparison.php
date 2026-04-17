@@ -77,16 +77,4 @@ class FacilityComparison extends DtoAbstract
 
     #[MapScalar('avg_price_diff_percentage')]
     public ?float $avgPriceDiffPercentage = null;
-
-    #[MapScalar('avg_price_per_squared_diff')]
-    public ?float $avgPricePerSquaredDiff = null;
-
-    #[MapScalar('avg_price_per_squared_diff_percentage')]
-    public ?float $avgPricePerSquaredDiffPercentage = null;
-
-    #[MapScalar('avg_price_per_cubic_diff')]
-    public ?float $avgPricePerCubicDiff = null;
-
-    #[MapScalar('avg_price_per_cubic_diff_percentage')]
-    public ?float $avgPricePerCubicDiffPercentage = null;
 }
