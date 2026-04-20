@@ -22,6 +22,8 @@ enum FeatureEnum: string
     case PARTNERS_PROMOTIONS = 'partners_promotions';
     case GOOGLE_REVIEWS = 'google_reviews';
     case ADS_DISABLED = 'ads_disabled';
+    case FREE_LEADS = 'free_leads';
+    case PRIORITY_REDIRECTED_LEADS = 'priority_redirected_leads';
 
     // Data Analytics Admin
     case DATA_ANALYTICS_COMPETITORS = 'competitor_insights';

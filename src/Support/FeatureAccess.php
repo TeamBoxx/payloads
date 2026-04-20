@@ -257,6 +257,16 @@ class FeatureAccess
             SubscriptionEnum::PREMIUM_AND_DATA,
             SubscriptionEnum::PLATINUM_AND_DATA,
         ],
+
+        FeatureEnum::FREE_LEADS->value => [
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::PLATINUM_AND_DATA,
+        ],
+
+        FeatureEnum::PRIORITY_REDIRECTED_LEADS->value => [
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::PLATINUM_AND_DATA,
+        ],
     ];
 
     protected const array EXCLUDED_ROLES_MVP_ADMIN = [
