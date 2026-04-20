@@ -30,9 +30,6 @@ enum SubscriptionEnum: string
     case PLATINUM_AND_DATA = 'platinum_with_data';
 
 
-    // Removed subscriptions
-    // case PREMIUM = 'premium';
-
     public static function all(): array
     {
         return array_column(self::cases(), 'value');
@@ -61,8 +58,6 @@ enum SubscriptionEnum: string
             self::DATA_PRODUCTS => 'Data Products',
             self::PREMIUM_AND_DATA => 'Premium Listing + Data Products',
             self::PLATINUM_AND_DATA => 'Platinum Listing + Data Products',
-
-        // self::PREMIUM => 'Premium (+ PPLC)',
         };
     }
 

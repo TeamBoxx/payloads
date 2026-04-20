@@ -20,7 +20,12 @@ class FeatureAccess
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::PROVIDER_WEBSITE_LINK->value => [
@@ -31,7 +36,11 @@ class FeatureAccess
             SubscriptionEnum::BASIC_PPC,
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::FACILITY_EDIT->value => [
@@ -46,7 +55,12 @@ class FeatureAccess
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::FACILITY_OPENING_HOURS->value => [
@@ -61,7 +75,12 @@ class FeatureAccess
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::FACILITY_SPECS->value => [
@@ -76,7 +95,12 @@ class FeatureAccess
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::FACILITY_PHOTOS->value => [
@@ -91,7 +115,12 @@ class FeatureAccess
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::FACILITY_PHONE_NUMBER->value => [
@@ -101,7 +130,11 @@ class FeatureAccess
             SubscriptionEnum::BASIC_PPC,
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::FACILITY_DESCRIPTION->value => [
@@ -120,7 +153,12 @@ class FeatureAccess
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::UNIT_CLICKABLE_LINK->value => [
@@ -130,7 +168,12 @@ class FeatureAccess
             SubscriptionEnum::BASIC_PPC,
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::UNIT_PROMOTIONS->value => [
@@ -145,7 +188,12 @@ class FeatureAccess
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::UPLIFT_SEARCH->value => [
@@ -156,7 +204,11 @@ class FeatureAccess
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
-            // SubscriptionEnum::PREMIUM,
+
+            SubscriptionEnum::PREMIUM,
+            SubscriptionEnum::PLATINUM,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::GOOGLE_REVIEWS->value => [
@@ -179,18 +231,31 @@ class FeatureAccess
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
+
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
 
         FeatureEnum::DATA_ANALYTICS_MARKET_ANALYSES->value => [
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
+
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
+
         ],
 
         FeatureEnum::DATA_ANALYTICS_PRICING_RECOMMENDATIONS->value => [
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
+
+            SubscriptionEnum::DATA_PRODUCTS,
+            SubscriptionEnum::PREMIUM_AND_DATA,
+            SubscriptionEnum::PLATINUM_AND_DATA,
         ],
     ];
 
