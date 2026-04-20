@@ -11,7 +11,7 @@ enum SubscriptionEnum: string
     case PAY_PER_CONVERSION = 'pay_per_conversion';
 
 
-    // Active subscriptions
+    // Deprecated old subscriptions
     case PAY_PER_CLICK = 'pay_per_click';
     case PAY_PER_LEAD = 'pay_per_lead';
     case PAY_PER_LEAD_AND_CLICK = 'pay_per_lead_and_click';
@@ -21,6 +21,13 @@ enum SubscriptionEnum: string
     case RECOMMENDED = 'recommended_pplc';
     case RECOMMENDED_PPC = 'recommended_ppc';
     case RECOMMENDED_PPL = 'recommended_ppl';
+
+    // Active subscriptions
+    case PREMIUM = 'premium';
+    case PLATINUM = 'platinum';
+    case DATA_PRODUCTS = 'data_products';
+    case PREMIUM_AND_DATA = 'premium_and_data';
+    case PLATINUM_AND_DATA = 'platinum_with_data';
 
 
     // Removed subscriptions
@@ -49,24 +56,14 @@ enum SubscriptionEnum: string
             self::RECOMMENDED_PPC => 'Recommended (+ PPC)',
             self::RECOMMENDED_PPL => 'Recommended (+ PPL)',
 
+            self::PREMIUM => 'Premium Listing',
+            self::PLATINUM => 'Platinum Listing',
+            self::DATA_PRODUCTS => 'Data Products',
+            self::PREMIUM_AND_DATA => 'Premium Listing + Data Products',
+            self::PLATINUM_AND_DATA => 'Platinum Listing + Data Products',
+
         // self::PREMIUM => 'Premium (+ PPLC)',
         };
-    }
-
-    public static function checkoutActiveCases(): array
-    {
-        return [
-            self::PAY_PER_CLICK,
-            self::PAY_PER_LEAD,
-            self::PAY_PER_LEAD_AND_CLICK,
-            self::BASIC,
-            self::BASIC_PPC,
-            self::BASIC_PPL,
-            self::RECOMMENDED,
-            self::RECOMMENDED_PPC,
-            self::RECOMMENDED_PPL,
-            // self::PREMIUM,
-        ];
     }
 
     public static function options(): array
