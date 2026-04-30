@@ -225,6 +225,7 @@ class FeatureAccess
         ],
 
         FeatureEnum::DATA_ANALYTICS_COMPETITORS->value => [
+            SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::BASIC_PPC,
             SubscriptionEnum::BASIC_PPL,
@@ -238,6 +239,7 @@ class FeatureAccess
         ],
 
         FeatureEnum::DATA_ANALYTICS_MARKET_ANALYSES->value => [
+            SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::BASIC_PPC,
             SubscriptionEnum::BASIC_PPL,
@@ -252,6 +254,7 @@ class FeatureAccess
         ],
 
         FeatureEnum::DATA_ANALYTICS_PRICING_RECOMMENDATIONS->value => [
+            SubscriptionEnum::PAY_PER_LEAD_AND_CLICK,
             SubscriptionEnum::BASIC,
             SubscriptionEnum::BASIC_PPC,
             SubscriptionEnum::BASIC_PPL,
