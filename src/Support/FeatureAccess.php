@@ -238,6 +238,9 @@ class FeatureAccess
         ],
 
         FeatureEnum::DATA_ANALYTICS_MARKET_ANALYSES->value => [
+            SubscriptionEnum::BASIC,
+            SubscriptionEnum::BASIC_PPC,
+            SubscriptionEnum::BASIC_PPL,
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
@@ -249,6 +252,9 @@ class FeatureAccess
         ],
 
         FeatureEnum::DATA_ANALYTICS_PRICING_RECOMMENDATIONS->value => [
+            SubscriptionEnum::BASIC,
+            SubscriptionEnum::BASIC_PPC,
+            SubscriptionEnum::BASIC_PPL,
             SubscriptionEnum::RECOMMENDED,
             SubscriptionEnum::RECOMMENDED_PPC,
             SubscriptionEnum::RECOMMENDED_PPL,
