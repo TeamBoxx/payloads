@@ -19,6 +19,9 @@ class SearchFiltersFacilities extends DtoAbstract
     #[MapScalar('radius')]
     public ?float $radius = null;
 
+    #[MapScalar('city_id')]
+    public ?int $cityId = null;
+
     #[MapScalar('pickup_and_delivery')]
     public ?bool $pickupAndDelivery = null;
 

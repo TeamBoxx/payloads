@@ -52,4 +52,11 @@ class CityPage extends DtoAbstract
 
     #[MapObject('averages')]
     public ?CityAverages $averages;
+
+    /** @var list<mixed>|null */
+    #[MapArray('polygon_coordinates', 'mixed')]
+    public ?array $polygonCoordinates = null;
+
+    #[MapScalar('no_data_within_polygon')]
+    public bool $noDataWithinPolygon = false;
 }
