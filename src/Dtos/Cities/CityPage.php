@@ -59,4 +59,7 @@ class CityPage extends DtoAbstract
 
     #[MapScalar('no_data_within_polygon')]
     public bool $noDataWithinPolygon = false;
+
+    #[MapScalar('has_polygon_coordinates')]
+    public bool $hasPolygonCoordinates = false;
 }
