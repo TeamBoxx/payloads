@@ -6,6 +6,7 @@ enum PromotionEnum: string
 {
     case PROMO_FIRST_WEEK_FREE = 'PROMO_FIRST_WEEK_FREE';
     case PROMO_FIRST_MONTH_FREE = 'PROMO_FIRST_MONTH_FREE';
+    case PROMO_FIRST_MONTH_FREE_MIN_3_MONTHS = 'PROMO_FIRST_MONTH_FREE_MIN_3_MONTHS';
     case PROMO_FIRST_SECOND_MONTH_FREE = 'PROMO_FIRST_SECOND_MONTH_FREE';
     case PROMO_50_PERCENT_OFF_FIRST_MONTH = 'PROMO_50_PERCENT_OFF_FIRST_MONTH';
     case PROMO_50_PERCENT_OFF_FIRST_2_MONTHS = 'PROMO_50_PERCENT_OFF_FIRST_2_MONTHS';
@@ -31,6 +32,7 @@ enum PromotionEnum: string
     case PROMO_10_PERCENT_OFF_FIRST_4_WEEKS = 'PROMO_10_PERCENT_OFF_FIRST_4_WEEKS';
     case PROMO_10_PERCENT_OFF_FIRST_8_WEEKS = 'PROMO_10_PERCENT_OFF_FIRST_8_WEEKS';
     case PROMO_10_PERCENT_OFF_FIRST_12_WEEKS = 'PROMO_10_PERCENT_OFF_FIRST_12_WEEKS';
+    case PROMO_10_PERCENT_OFF_FIRST_YEAR_MIN_12_MONTHS = 'PROMO_10_PERCENT_OFF_FIRST_YEAR_MIN_12_MONTHS';
     case PROMO_ONLY_1_EURO_FIRST_WEEK = 'PROMO_ONLY_1_EURO_FIRST_WEEK';
     case PROMO_ONLY_1_EURO_FIRST_MONTH = 'PROMO_ONLY_1_EURO_FIRST_MONTH';
     case PROMO_ONLY_1_EURO_FIRST_2_MONTHS = 'PROMO_ONLY_1_EURO_FIRST_2_MONTHS';
@@ -53,6 +55,7 @@ enum PromotionEnum: string
         $label = match ($this) {
             self::PROMO_FIRST_WEEK_FREE => '1st week free',
             self::PROMO_FIRST_MONTH_FREE => '1st month free',
+            self::PROMO_FIRST_MONTH_FREE_MIN_3_MONTHS => 'First month free (min. 3 months)',
             self::PROMO_FIRST_SECOND_MONTH_FREE => '1st two months free',
             self::PROMO_50_PERCENT_OFF_FIRST_MONTH => '50% off your first month',
             self::PROMO_50_PERCENT_OFF_FIRST_2_MONTHS => '50% off for the first 2 months',
@@ -78,6 +81,7 @@ enum PromotionEnum: string
             self::PROMO_10_PERCENT_OFF_FIRST_4_WEEKS => '10% off for the first 4 weeks',
             self::PROMO_10_PERCENT_OFF_FIRST_8_WEEKS => '10% off for the first 8 weeks',
             self::PROMO_10_PERCENT_OFF_FIRST_12_WEEKS => '10% off for the first 12 weeks',
+            self::PROMO_10_PERCENT_OFF_FIRST_YEAR_MIN_12_MONTHS => '10% off first year (min. 12 months)',
             self::PROMO_ONLY_1_EURO_FIRST_WEEK => 'First week for only :currency 1',
             self::PROMO_ONLY_1_EURO_FIRST_MONTH => 'First month for only :currency 1',
             self::PROMO_ONLY_1_EURO_FIRST_2_MONTHS => 'First 2 months for only :currency 1',
