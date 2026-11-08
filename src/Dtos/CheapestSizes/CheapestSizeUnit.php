@@ -3,6 +3,8 @@
 namespace Thestoragescanner\Payloads\Dtos\CheapestSizes;
 
 use Thestoragescanner\Payloads\Dtos\DtoAbstract;
+use Thestoragescanner\Payloads\Dtos\ImageDTO;
+use Thestoragescanner\Payloads\Mapper\Attributes\MapObject;
 use Thestoragescanner\Payloads\Mapper\Attributes\MapScalar;
 
 class CheapestSizeUnit extends DtoAbstract
@@ -12,6 +14,9 @@ class CheapestSizeUnit extends DtoAbstract
 
     #[MapScalar('provider_name')]
     public string $providerName;
+
+    #[MapObject('image')]
+    public ?ImageDTO $image = null;
 
     #[MapScalar('facility_id')]
     public int $facilityId;
