@@ -11,6 +11,7 @@ enum PromotionEnum: string
     case PROMO_50_PERCENT_OFF_FIRST_MONTH = 'PROMO_50_PERCENT_OFF_FIRST_MONTH';
     case PROMO_50_PERCENT_OFF_FIRST_2_MONTHS = 'PROMO_50_PERCENT_OFF_FIRST_2_MONTHS';
     case PROMO_50_PERCENT_OFF_FIRST_3_MONTHS = 'PROMO_50_PERCENT_OFF_FIRST_3_MONTHS';
+    case PROMO_50_PERCENT_OFF_FIRST_12_MONTHS = 'PROMO_50_PERCENT_OFF_FIRST_12_MONTHS';
     case PROMO_50_PERCENT_OFF_FIRST_4_WEEKS = 'PROMO_50_PERCENT_OFF_FIRST_4_WEEKS';
     case PROMO_50_PERCENT_OFF_FIRST_8_WEEKS = 'PROMO_50_PERCENT_OFF_FIRST_8_WEEKS';
     case PROMO_50_PERCENT_OFF_FIRST_12_WEEKS = 'PROMO_50_PERCENT_OFF_FIRST_12_WEEKS';
@@ -60,6 +61,7 @@ enum PromotionEnum: string
             self::PROMO_50_PERCENT_OFF_FIRST_MONTH => '50% off your first month',
             self::PROMO_50_PERCENT_OFF_FIRST_2_MONTHS => '50% off for the first 2 months',
             self::PROMO_50_PERCENT_OFF_FIRST_3_MONTHS => '50% off for the first 3 months',
+            self::PROMO_50_PERCENT_OFF_FIRST_12_MONTHS => '50% off for the first 12 months',
             self::PROMO_50_PERCENT_OFF_FIRST_4_WEEKS => '50% off for the first 4 weeks',
             self::PROMO_50_PERCENT_OFF_FIRST_8_WEEKS => '50% off for the first 8 weeks',
             self::PROMO_50_PERCENT_OFF_FIRST_12_WEEKS => '50% off for the first 12 weeks',
